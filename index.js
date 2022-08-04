@@ -6,20 +6,24 @@ const session = require('express-session')
 const connectDB = require("./db/connect");
 const app = express()
 const cors = require('cors')
-const session = require('./middleware/session')
+// const session = require('./middleware/session')
 
 
 // * middleware ****************************************************************
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.uee(cors())
+app.use(cors())
 app.use(session({
     secret: ' Top secret',
     saveUninitialized: true,
     resave: false
 }))
-app.use(session)
+app.use( (req, res, next) => {
+  res.locals.message = req.session.message
+  delete req.session.message
+  next();
+})
 
 app.set("view engine", "ejs")
 
