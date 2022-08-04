@@ -4,7 +4,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get("/", (req, res) => {
-    res.send('Heme pg')
+    res.render("index", {title: " home page"})
 })
 
 module.exports = router

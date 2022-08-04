@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title here is a kind of variable to use in routes.js -->
+    <title><%= title %> </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head> 
+<body>
+
+        <div class="wrapper">
+            <div id="overlay"></div>
+            <!-- sidebar start -->
+            <div class="sidebar shadow">
+              <div class="admin_brand d-flex justify-content-between align-items-baseline">
+                <div>
+                  <a class="nav-link fw-bold" href="#">
+                    <span class="icon"><i class="fas fa-code"></i></span>
+                    <span class="menu">Admin Panel</span>
+                  </a>
+                </div>
+                <div class="d-block d-md-none">
+                  <a href="javascript:void(0)" id="close_sidebar"><i class="fas fa-times-circle fa-lg text-secondary"></i></a>
+                </div>
+              </div>
+              <ul class="nav nav-pills flex-column">
+      
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="icon" data-bs-toggle="tooltip" data-bs-title="Dashboard"><i
+                        class="fas fa-dashboard"></i></span>
+                    <span class="menu">Dashboard</span>
+                  </a>
+                </li>
+      
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <span class="icon" data-bs-toggle="tooltip" data-bs-title="Users"><i class="fas fa-users"></i></span>
+                    <span class="menu">Users</span>
+                  </a>
+                </li>
+      
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="icon" data-bs-toggle="tooltip" data-bs-title="Logout"><i class="fas fa-sign-out"></i></span>
+                    <span class="menu">Logout</span>
+                  </a>
+                </li>
+      
+              </ul>
+            </div>
+            <!-- sidebar end -->
+            <div class="content">
+              <!-- top navbar start -->
+              <nav class="navbar navbar-expand-md navbar-light bg-light shadow">
+                <div class="container-fluid px-3">
+      
+                  <button class="navbar-toggler" type="button" id="show_sidebar_phone">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+      
+      
+                  <a class="navbar-brand d-none d-md-block" href="javascript:void(0)" id="show_sidebar_pc">
+                    <i class="fas fa-bars fa-lg"></i>
+                  </a>
+      
+                  <div class="fw-bold text-secondary d-md-none d-block">Admin Panel</div>
+      
+                  <div class="dropdown">
+                    <button class="btn bg-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="fas fa-user-circle fa-lg me-2"></i>Sahil
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-address-card me-2"></i>Profile</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Account</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+   
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
