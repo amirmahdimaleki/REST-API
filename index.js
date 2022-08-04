@@ -23,11 +23,9 @@ app.use(session)
 
 app.set("view engine", "ejs")
 
-// * routing ******************************************************************
+// * route prefix ******************************************************************
 
-app.get("/", (req, res)=>{
-    res.send("REST API!")
-})
+app.use("", require('./routes/routes'))
 
 // * app.listen (server start) ************************************************
 const PORT = process.env.PORT || 5000;
